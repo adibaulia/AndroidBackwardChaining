@@ -1,5 +1,11 @@
 apply plugin: 'com.android.application'
 
+apply plugin: 'android'
+
+repositories {
+    mavenCentral()
+}
+
 android {
     compileSdkVersion 26
     defaultConfig {
@@ -25,4 +31,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation group: 'com.github.cschen1205', name: 'java-expert-system-shell', version: '1.0.1'
 }

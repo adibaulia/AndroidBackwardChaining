@@ -6,4 +6,15 @@
     android:layout_height="match_parent"
     tools:context="com.example.adibauliar.backwardchaining.MainActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/test"
+        android:text="TEST"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:paddingBottom="20dp"
+        android:paddingTop="10dp"/>
+
 </android.support.constraint.ConstraintLayout>
