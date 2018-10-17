@@ -23,70 +23,86 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         this.getInferenceEngine();
-
         test = (TextView) findViewById(R.id.test);
-        //test.setText(testBackwardChain().toString());
-        pertanyaan();
-
-
+        test.setText(testBackwardChain());
     }
 
-//    public Clause testBackwardChain()
-//    {
-//
-//        rie.addFact(new EqualsClause("zat", "cream"));
-//        rie.addFact(new EqualsClause("warna", "berwarna"));
-//        rie.addFact(new EqualsClause("kegunaan", "untuk make up"));
-//        rie.addFact(new EqualsClause("kegunaan", "di bibir"));
-//
-//        Vector<Clause> unproved_conditions= new Vector<>();
-//
-//        Clause conclusion=rie.infer("type", unproved_conditions);
-//
-//        return(conclusion);
-//    }
 
-    public void pertanyaan()
+
+    public String testBackwardChain()
     {
-        rie.getRules();
-        System.out.println(rie.getRule(1).nextAntecedent());
+
+        rie.addFact(new EqualsClause("Warna","Lebih dari 1 warna"));
+        rie.addFact(new EqualsClause("Lokasi pengaplikasian","Wajah"));
+        rie.addFact(new EqualsClause("Sifat zat","Cair"));
+        rie.addFact(new EqualsClause("Pengaplikasian","Spons, Brush"));
+        rie.addFact(new EqualsClause("Kegunaan","Meratakan Warna Kulit"));
+        rie.addFact(new EqualsClause("Kandungan","UV protection"));
+
+        Vector<Clause> unproved_conditions= new Vector<>();
+
+        Clause conclusion=rie.infer("Tipe kosmetik", unproved_conditions);
+
+        String hasil = "";
+
+        if(conclusion==null){
+         hasil = "Hasil Tidak ditemukan";
+    }else{
+            hasil = conclusion.toString();
+        }
+        return(hasil);
+
     }
+
+//    public void pertanyaan()
+//    {
+//        rie.getRules();
+//        System.out.println(rie.getRule(1).nextAntecedent());
+//    }
 
 
     private RuleInferenceEngine getInferenceEngine()
     {
         RuleInferenceEngine rie=new KieRuleInferenceEngine();
 
-        Rule rule=new Rule("Lip Cream");
-        rule.addAntecedent(new EqualsClause("zat", "cream"));
-        rule.addAntecedent(new EqualsClause("warna", "berwarna"));
-        rule.addAntecedent(new EqualsClause("kegunaan", "untuk make up"));
-        rule.addAntecedent(new EqualsClause("kegunaan", "di bibir"));
-        rule.setConsequent(new EqualsClause("type", "Lip Cream"));
+        Rule rule=new Rule("Mascara");
+        rule.addAntecedent(new EqualsClause("Warna", "Lebih dari 1 warna"));
+        rule.addAntecedent(new EqualsClause("Lokasi pengaplikasian", "Mata"));
+        rule.addAntecedent(new EqualsClause("Sifat zat", "Creamy"));
+        rule.addAntecedent(new EqualsClause("Pengaplikasian", "Menggunakan Spoolie"));
+        rule.addAntecedent(new EqualsClause("Kegunaan", "Memperindah bagian mata"));
+        rule.addAntecedent(new EqualsClause("Kandungan", "Collagen"));
+        rule.setConsequent(new EqualsClause("Tipe kosmetik", "Mascara"));
         rie.addRule(rule);
 
-        rule=new Rule("Mascara");
-        rule.addAntecedent(new EqualsClause("zat", "cream"));
-        rule.addAntecedent(new EqualsClause("warna", "berwarna"));
-        rule.addAntecedent(new EqualsClause("kegunaan", "untuk make up"));
-        rule.addAntecedent(new EqualsClause("kegunaan", "di bibir"));
-        rule.setConsequent(new EqualsClause("type", "Mascara"));
+        rule=new Rule("Lipcream");
+        rule.addAntecedent(new EqualsClause("Warna", "Lebih dari 1 warna"));
+        rule.addAntecedent(new EqualsClause("Lokasi pengaplikasian", "Bibir"));
+        rule.addAntecedent(new EqualsClause("Sifat zat", "Creamy"));
+        rule.addAntecedent(new EqualsClause("Pengaplikasian", "Brush aplikator"));
+        rule.addAntecedent(new EqualsClause("Kegunaan", "Memberi warna pada bibir"));
+        rule.addAntecedent(new EqualsClause("Kandungan", "Olive Oil"));
+        rule.setConsequent(new EqualsClause("Tipe kosmetik", "Lipcream"));
         rie.addRule(rule);
 
         rule=new Rule("Makeup Remover");
-        rule.addAntecedent(new EqualsClause("zat", "cream"));
-        rule.addAntecedent(new EqualsClause("warna", "berwarna"));
-        rule.addAntecedent(new EqualsClause("kegunaan", "untuk make up"));
-        rule.addAntecedent(new EqualsClause("kegunaan", "di bibir"));
-        rule.setConsequent(new EqualsClause("type", "Makeup Remover"));
+        rule.addAntecedent(new EqualsClause("Warna", "Transparan"));
+        rule.addAntecedent(new EqualsClause("Lokasi pengaplikasian", "Wajah"));
+        rule.addAntecedent(new EqualsClause("Sifat zat", "Cair"));
+        rule.addAntecedent(new EqualsClause("Pengaplikasian", "Kapas"));
+        rule.addAntecedent(new EqualsClause("Kegunaan", "Membersihkan wajah/sisa makeup"));
+        rule.addAntecedent(new EqualsClause("Kandungan", "Alkohol / Coconut Oil"));
+        rule.setConsequent(new EqualsClause("Tipe kosmetik", "Makeup Remover"));
         rie.addRule(rule);
 
-        rule=new Rule("BB cream");
-        rule.addAntecedent(new EqualsClause("zat", "cream"));
-        rule.addAntecedent(new EqualsClause("warna", "berwarna"));
-        rule.addAntecedent(new EqualsClause("kegunaan", "untuk make up"));
-        rule.addAntecedent(new EqualsClause("kegunaan", "di bibir"));
-        rule.setConsequent(new EqualsClause("type", "BB cream"));
+        rule=new Rule("BBcream");
+        rule.addAntecedent(new EqualsClause("Warna", "Lebih dari 1 warna"));
+        rule.addAntecedent(new EqualsClause("Lokasi pengaplikasian", "Wajah"));
+        rule.addAntecedent(new EqualsClause("Sifat zat", "Cair"));
+        rule.addAntecedent(new EqualsClause("Pengaplikasian", "Spons, Brush"));
+        rule.addAntecedent(new EqualsClause("Kegunaan", "Meratakan Warna Kulit"));
+        rule.addAntecedent(new EqualsClause("Kandungan", "UV protection"));
+        rule.setConsequent(new EqualsClause("Tipe kosmetik", "BBcream"));
         rie.addRule(rule);
 
         return rie;
