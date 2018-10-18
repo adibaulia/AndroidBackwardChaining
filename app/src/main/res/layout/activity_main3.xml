@@ -5,17 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.adibauliar.backwardchaining.MainActivity">
-
-
+        
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="170dp"
         android:textSize="20sp"
         android:textStyle="italic"
         android:textColor="#000000"
-        android:text="Silahkan pilih salah satu dari alat kosmetik di bawah ini yang akan saya tebak"
+        android:text="Di bagian mana alat ini di aplikasikan ?"
         />
 
 <RadioGroup
@@ -28,7 +27,7 @@ android:id="@+id/radioGroup">
     android:id="@+id/radio_one"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="One"
+    android:text="Mata"
     android:onClick="checkButton"
     android:checked="true"/>
 
@@ -36,15 +35,22 @@ android:id="@+id/radioGroup">
     android:id="@+id/radio_two"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Two"
+    android:text="Bibir"
     android:onClick="checkButton"/>
 
 <RadioButton
     android:id="@+id/radio_three"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Three"
+    android:text="Keseluruhan wajah"
     android:onClick="checkButton"/>
+
+    <RadioButton
+        android:id="@+id/radio_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wajah"
+        android:onClick="checkButton"/>
 
 </RadioGroup>
 
@@ -67,4 +73,6 @@ android:layout_centerHorizontal="true"
 android:layout_marginTop="37dp"
 android:text="apply" />
 
-    </RelativeLayout>
+
+
+</RelativeLayout>
