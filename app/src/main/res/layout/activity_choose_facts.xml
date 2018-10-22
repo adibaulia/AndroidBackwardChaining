@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    tools:context="com.example.adibauliar.backwardchaining.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Silahkan Isi sesuai dengan makeup yang telah anda pilih sebelumnya!"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            android:textStyle="italic"
+            android:padding="4sp"
+            android:textAlignment="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:textColor="#000000"
+            android:text="Berapa jenis warna produk yang disediakan ?"
+            />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/warna">
+
+            <RadioButton
+                android:id="@+id/sewarna"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text= "1 Warna"/>
+
+            <RadioButton
+                android:id="@+id/transparan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transparan"/>
+
+        </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginTop="15dp"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                android:textColor="#000000"
+                android:text="Di bagian mana alat ini di aplikasikan ?"
+                />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:id="@+id/bagian">
+
+                <RadioButton
+                    android:id="@+id/mata"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mata"/>
+
+                <RadioButton
+                    android:id="@+id/bibir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bibir"/>
+
+                <RadioButton
+                    android:id="@+id/wajah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wajah"/>
+
+            </RadioGroup>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginTop="15dp"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                android:textColor="#000000"
+                android:text="Apakah sifat zat yang terkandung dalam alat ini ?"
+                />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/zat">
+
+                <RadioButton
+                    android:id="@+id/creamy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Creamy"/>
+
+                <RadioButton
+                    android:id="@+id/cair"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cair"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginTop="15dp"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                android:textColor="#000000"
+                android:text="Bagaimana cara pengaplikasian Makeup ?"
+                />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/pengaplikasian">
+
+                <RadioButton
+                    android:id="@+id/spoolie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Menggunakan Spoolie" />
+
+                <RadioButton
+                    android:id="@+id/brush"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Brush Aplikator"/>
+
+                <RadioButton
+                    android:id="@+id/kapas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kapas"/>
+
+                <RadioButton
+                    android:id="@+id/spons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spons dan brush"/>
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginTop="15dp"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                android:textColor="#000000"
+                android:text="Apasih kegunaan barang ini?"
+                />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/kegunaan">
+
+                <RadioButton
+                    android:id="@+id/kegunaan_mata"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Memperindah bagian mata"
+                    />
+
+                <RadioButton
+                    android:id="@+id/kegunaan_bibir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Memberi warna pada bibir"/>
+
+                <RadioButton
+                    android:id="@+id/kegunaan_bersih"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Membersihkan wajah dan sisa make up"/>
+
+                <RadioButton
+                    android:id="@+id/kegunaan_kulit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Meratakan warna kulit"/>
+
+            </RadioGroup>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginTop="15dp"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                android:textColor="#000000"
+                android:text="Kandungan apa yang terdapat didalam alat ini ?"
+                />
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/kandungan">
+
+                <RadioButton
+                    android:id="@+id/collagen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Collagen"
+                    />
+
+                <RadioButton
+                    android:id="@+id/olive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Olive Oil"/>
+
+                <RadioButton
+                    android:id="@+id/alcohol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alkohol / Coconut Oil"
+                    />
+
+                <RadioButton
+                    android:id="@+id/uv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="UV Protection"/>
+
+
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_apply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="apply" />
+
+    </LinearLayout>
+
+</ScrollView>

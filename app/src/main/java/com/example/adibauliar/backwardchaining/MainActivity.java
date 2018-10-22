@@ -1,5 +1,6 @@
 package com.example.adibauliar.backwardchaining;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -18,30 +19,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        radioGroup = findViewById(R.id.radioGroup);
-        textView = findViewById(R.id.text_view_selected);
-
-        Button buttonApply = findViewById(R.id.button_apply);
-        buttonApply.setOnClickListener(new View.OnClickListener() {
+        Button next = findViewById(R.id.next);
+        next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int radioId = radioGroup.getCheckedRadioButtonId();
-
-                radioButton = findViewById(radioId);
-
-                textView.setText("Your choice: " + radioButton.getText());
+                Intent mainIntent = new Intent(MainActivity.this, ChooseFacts.class);
+                MainActivity.this.startActivity(mainIntent);
+                MainActivity.this.finish();
             }
         });
     }
 
-    public void checkButton(View v) {
-        int radioId = radioGroup.getCheckedRadioButtonId();
 
-        radioButton = findViewById(radioId);
-
-        Toast.makeText(this, "Selected Radio Button: " + radioButton.getText(),
-                Toast.LENGTH_SHORT).show();
-    }
 }
 
 
