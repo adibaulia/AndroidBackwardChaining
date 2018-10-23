@@ -42,10 +42,11 @@
             android:id="@+id/warna">
 
             <RadioButton
-                android:id="@+id/sewarna"
+                android:id="@+id/lebih1warna"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text= "1 Warna"/>
+                android:text= "Lebih dari 1 warna"
+                />
 
             <RadioButton
                 android:id="@+id/transparan"
@@ -172,7 +173,7 @@
                     android:id="@+id/brush"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Brush Aplikator"/>
+                    android:text="Brush aplikator"/>
 
                 <RadioButton
                     android:id="@+id/kapas"
@@ -184,7 +185,7 @@
                     android:id="@+id/spons"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Spons dan brush"/>
+                    android:text="Spons, Brush"/>
             </RadioGroup>
         </LinearLayout>
 
@@ -227,13 +228,13 @@
                     android:id="@+id/kegunaan_bersih"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Membersihkan wajah dan sisa make up"/>
+                    android:text="Membersihkan wajah/sisa makeup"/>
 
                 <RadioButton
                     android:id="@+id/kegunaan_kulit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Meratakan warna kulit"/>
+                    android:text="Meratakan Warna Kulit"/>
 
             </RadioGroup>
 
@@ -287,7 +288,7 @@
                     android:id="@+id/uv"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="UV Protection"/>
+                    android:text="UV protection"/>
 
 
             </RadioGroup>
