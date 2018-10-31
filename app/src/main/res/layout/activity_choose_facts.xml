@@ -297,6 +297,9 @@
         </LinearLayout>
 
         <Button
+            android:layout_marginTop="25dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
             android:id="@+id/button_apply"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

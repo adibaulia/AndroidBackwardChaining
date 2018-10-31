@@ -25,6 +25,7 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textSize="20sp"
+        android:padding="10dp"
         android:textStyle="italic"
         android:textColor="#000000"
         android:text="Silahkan pilih salah satu dari alat kosmetik di bawah ini dan ingat ingat ciri ciri sesuai dengan pilihan anda!"
@@ -72,6 +73,8 @@
 
     <Button
         android:id="@+id/next"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

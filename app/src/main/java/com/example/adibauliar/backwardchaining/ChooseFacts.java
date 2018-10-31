@@ -152,7 +152,7 @@ public class ChooseFacts extends AppCompatActivity {
         rule=new Rule("BBcream");
         rule.addAntecedent(new EqualsClause("Warna", "Lebih dari 1 warna"));
         rule.addAntecedent(new EqualsClause("Lokasi pengaplikasian", "Wajah"));
-        rule.addAntecedent(new EqualsClause("Sifat zat", "Cair"));
+        rule.addAntecedent(new EqualsClause("Sifat zat", "Creamy"));
         rule.addAntecedent(new EqualsClause("Pengaplikasian", "Spons, Brush"));
         rule.addAntecedent(new EqualsClause("Kegunaan", "Meratakan Warna Kulit"));
         rule.addAntecedent(new EqualsClause("Kandungan", "UV protection"));
