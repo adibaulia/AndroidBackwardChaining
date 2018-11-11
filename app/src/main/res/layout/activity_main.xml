@@ -68,7 +68,7 @@
             android:layout_marginTop="20dp"
             android:textStyle="italic"
             android:textColor="#000000"
-            android:text="BBCream"
+            android:text="Eyeshadow"
             />
 
     <Button
